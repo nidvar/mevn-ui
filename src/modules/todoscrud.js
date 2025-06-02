@@ -64,11 +64,9 @@ const getTodos = function(){
         };
         fetch('http://localhost:3000/todos/update/' + id, responseOptions)
         .then((res)=>{
-            console.log(res.body)
             return res.body
         })
         .then((res)=>{
-            console.log(res);
             router.push('/')
         });
     }

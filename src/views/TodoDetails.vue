@@ -1,13 +1,12 @@
 <script lang="js" setup>
     import getTodos from '../modules/todoscrud';
-    import { onMounted, ref } from 'vue';
+    import { onMounted } from 'vue';
 
     const module = getTodos();
     const state = module.state
     const selectedTodo = module.selectedTodo;
 
     const editTodo = function(id){
-        console.log('edit', id);
         module.editTodo(id)
     }
 
